@@ -1,4 +1,4 @@
-import { AGE_UP_FROM_SAGA, AGE_DOWN } from '../actions/actionTypes'
+import { AGE_UP_FROM_SAGA, AGE_DOWN_FROM_SAGA } from '../actions/actionTypes'
 
 const initialState = {
     age:20
@@ -12,7 +12,7 @@ const reducer = (state=initialState, action) => {
             newState.age += action.value;
             break;
         
-        case AGE_DOWN: 
+        case AGE_DOWN_FROM_SAGA: 
             newState.age -= action.value;
             break;
     }

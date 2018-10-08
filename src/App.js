@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import { connect } from "react-redux";
+import { AGE_UP, AGE_DOWN } from './actions/actionTypes'
 
 class App extends Component {
   render() {
@@ -24,10 +25,11 @@ const mapStateToProps = state => {
 
 const mapDispachToProps = dispatch => {
   return {
-    onAgeUp: () => dispatch({ type: "AGE_UP", value: 1 }),
-    onAgeDown: () => dispatch({ type: "AGE_DOWN", value: 1 })
+    onAgeUp: () => dispatch({ type: AGE_UP, value: 1 }),
+    onAgeDown: () => dispatch({ type: AGE_DOWN, value: 1 })
   };
 };
+
 export default connect(
   mapStateToProps,
   mapDispachToProps

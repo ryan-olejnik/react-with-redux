@@ -16,7 +16,7 @@ function* asynchAgeDown() {
 }
 
 
-export function* watchAgeChange() {
+export function* rootSaga() {
   yield all([
     takeEvery(AGE_UP, asynchAgeUp),
     takeEvery(AGE_DOWN, asynchAgeDown)
